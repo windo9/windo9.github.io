@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>MNHY</title>
+    <link href="https://www.enjoyxstudy.com/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://www.enjoyxstudy.com/css/baselayout.css" rel="stylesheet">
+      <style type="text/css">
+      <!--
+        div#contents table {
+          width: 60%;
+          margin: 10px 2px 10px 15px;
+          border:solid 1px #000000;
+          border-collapse: collapse;
+        }
+        div#contents th, div#contents td {
+          padding: 2px 4px;
+          border:solid 1px;
+        }
+        strong {
+          font-weight: normal;
+        }
+        strong.high1 {
+          background-color: #FFFF99
+        }
+        strong.high2 {
+          background-color: #CCFFFF;
+        }
+        strong.high3 {
+          background-color: #CCFF99;
+        }
+        strong.high4 {
+          background-color: #FFCC99;
+        }
+        -->
+    </style>
+  </head>
+  <body>
+    <!--main-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        <p> 『ー＞「　、　&quot;、'ー＞^ 、半角スペースでAND　</p>MNHY<a href="/BOT.hyml"></a>
+          <hr>
+            <input id="text" type="text" name="pattern" value="" autocomplete="off" size="80" />
+            &nbsp;&nbsp;<span id="status"></span>
+          </p>
+          <!-- 検索結果の表示エリア -->
+          <div id="view_area"></div>
+        </div>
+      </div><!--/row-->
+    </div><!--/container-->
+    <footer class="footer">
+    </footer>
+    <!-- Bootstrap core JavaScript
+      ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://www.enjoyxstudy.com/js/bootstrap.min.js"></script>
+    <script src="https://www.enjoyxstudy.com/js/scripts.js"></script>
+    <script src="https://www.enjoyxstudy.com/javascript/incsearch/incsearch.js"></script>
+    <script>
+      <!--
+        // 検索対象のデータ(配列)
+        var list = [
+                    ['JavaScript', 'MochiKit']
+                   ];
+
+        // wondowのonloadイベントに追加
+        var start = function(){
+          new IncSearch.ViewTable(
+            'text',      // 入力が行われるエレメントのID
+            'view_area', // 検索結果を表示するエレメントのID
+            list,        // 検索対象のリスト
+            {dispMax: 30,  // オプション
+             startElementText: '<table class="table table-bordered"><tr><th width="85%">Q</th><th width="15%">R</th>',
+             interval:166,
+             initDispNon:true,
+             ignoreCase:true
+            }
+          );
+        };
+        window.addEventListener ?
+          window.addEventListener('load', start, false) :
+          window.attachEvent('onload', start);
+
+        //-->
+    </script>
+  </body>
+</html>
