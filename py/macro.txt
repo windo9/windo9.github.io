@@ -1,0 +1,55 @@
+
+Sub a()
+
+Image_Name = "cam000005_2024018"
+Image_Location = "C:\work\TTP\Acecare\Ping_Log\py\csv2bmp"
+Image_Format = ".bmp"
+
+Dim cell_img  As Range
+Dim cella As Range
+
+'セル範囲を全てループ   776
+For Each cell_img In Range("H2:H776")
+
+    Set cella = cell_img.Offset(0, -4)
+    
+    Image_Name = cella.Value
+    'Replace(cella.Value, "_", "")
+    '"C:\work\TTP\Acecare\Ping_Log\py\csv2bmp\cam000005_20240118.bmp"
+    Image_Path = Image_Location + "\" + Image_Name + Image_Format
+
+    cell_img.Select
+    Selection.InsertPictureInCell Image_Path
+    
+Next
+
+End Sub
+
+
+
+-- old
+
+Sub Macro1()
+
+Image_Name = "cam000005-20240107"
+Image_Location = "C:\work\TTP\Acecare\Ping_Log\Ping_Logs_240115from240107\csv\img"
+Image_Format = ".bmp"
+
+Dim cell_img  As Range
+Dim cella As Range
+
+'セル範囲を全てループ
+For Each cell_img In Range("F2:F460")
+
+    Set cella = cell_img.Offset(0, -5)
+    
+    Image_Name = Replace(cella.Value, "_", "")
+    Image_Path = Image_Location + "\" + Image_Name + Image_Format
+
+    cell_img.Select
+    Selection.InsertPictureInCell Image_Path
+    
+Next
+
+End Sub
+
